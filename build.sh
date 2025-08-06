@@ -10,8 +10,6 @@ repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 
-rm -rf prebuilts/clang/host/linux-x86
-
 # repo sync script
 /opt/crave/resync.sh
 
