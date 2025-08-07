@@ -27,7 +27,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${mf[@]}"
 
 # Deivce Tree
-git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b 16.0 device/xiaomi/munch
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b Evolution-X-bka device/xiaomi/munch
 
 # Vendor Tree
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
@@ -36,7 +36,8 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch -b yaap-munch kernel/xiaomi/munch
+#git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch -b yaap-munch kernel/xiaomi/munch
+git clone https://github.com/SenseiiX/fusionX_sm8250.git -b stable-susfs kernel/xiaomi/munch
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi
