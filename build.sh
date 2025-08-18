@@ -56,6 +56,11 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Build
+rm -rf system/core
+git clone https://github.com/Olzhas-Kdyr/android_system_core.git system/core
+rm -rf hardware/lineage/compat
+git clone https://github.com/Olzhas-Kdyr/android_hardware_lineage_compat hardware/lineage/compat
+
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
 mka bacon
