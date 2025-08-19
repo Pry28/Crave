@@ -8,10 +8,12 @@ rm -rf .repo/local_manifests
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 #repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
-#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
-repo init -u https://github.com/crdroidx/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+#repo init -u https://github.com/crdroidx/android.git -b 16.0 --git-lfs --no-clone-bundle
 
 # repo sync script
+rm -rf system/core
+rm -rf hardware/lineage/compat
 /opt/crave/resync.sh
 
 # Remove old device specific repos
@@ -28,7 +30,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b Lunaris device/xiaomi/munch
 
 # Vendor Tree
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
@@ -56,11 +58,6 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Build
-rm -rf system/core
-git clone https://github.com/Olzhas-Kdyr/android_system_core.git system/core
-rm -rf hardware/lineage/compat
-git clone https://github.com/Olzhas-Kdyr/android_hardware_lineage_compat hardware/lineage/compat
-
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
 mka bacon
