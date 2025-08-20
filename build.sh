@@ -61,3 +61,11 @@ git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
 m lunaris
+
+cd out/target/product && mv munch gapps && cd ../../..
+cd device/xiaomi/munch && rm lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+
+. build/envsetup.sh
+lunch lineage_munch-bp2a-user
+m lunaris
+
