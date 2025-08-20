@@ -60,4 +60,4 @@ git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/
 # Build
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
-mka bacon
+m lunaris
