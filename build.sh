@@ -28,7 +28,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b luna device/xiaomi/munch
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b testing device/xiaomi/munch
 
 # Vendor Tree
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
