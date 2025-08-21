@@ -55,6 +55,10 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 # ViPER4AndroidFX
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
+# Fix for lowram profile
+rm -rf vendor/lineage
+git clone https://github.com/Olzhas-Kdyr/vendor_lineage.git vendor/lineage
+
 # Build
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
