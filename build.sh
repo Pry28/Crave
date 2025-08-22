@@ -38,7 +38,8 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 
 # Kernel Tree
 #git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch -b yaap-munch kernel/xiaomi/munch
-git clone https://github.com/SenseiiX/fusionX_sm8250.git -b stable-susfs kernel/xiaomi/munch
+#git clone https://github.com/SenseiiX/fusionX_sm8250.git -b stable-susfs kernel/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/kernel_munch kernel/xiaomi/munch
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi
