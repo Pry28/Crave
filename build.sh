@@ -64,8 +64,8 @@ git clone https://github.com/Olzhas-Kdyr/vendor_lineage.git vendor/lineage
 lunch lineage_munch-bp2a-user
 m lunaris
 
-cd out/target/product && mv munch gapps && cd ../../..
-cd device/xiaomi/munch && rm lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
