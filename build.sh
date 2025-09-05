@@ -29,7 +29,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/Olzhas-Kdyr/kernel_munch kernel/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi
