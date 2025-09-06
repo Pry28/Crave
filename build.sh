@@ -20,10 +20,10 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone https://github.com/PocoF4Trees/androi_device_xiaomi_munch device/xiaomi/munch
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch
 
 # Vendor Tree
-git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch
 
 # Munch FW
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
@@ -32,7 +32,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch
 
 # Hardware Xiaomi
-git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi
+git clone https://github.com/PocoF4Trees/hardware_xiaomi hardware/xiaomi
 
 # Hardware Dolby Atmos
 git clone https://github.com/PocoF4Trees/hardware_dolby hardware/dolby
