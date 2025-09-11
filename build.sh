@@ -7,7 +7,7 @@
 #/opt/crave/resync.sh
 
 # Remove old device specific repos
-#remove=(
+remove=(
 device/xiaomi
 #kernel/xiaomi
 #vendor/xiaomi
