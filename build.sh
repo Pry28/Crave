@@ -48,6 +48,8 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX
 
 # Build
 . build/envsetup.sh
+export BUILD_USERNAME=olzhas0986
+export BUILD_HOSTNAME=dev
 lunch lineage_munch-bp2a-user
 m lunaris
 
@@ -55,5 +57,9 @@ cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
 cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
 . build/envsetup.sh
+# Unnecessary shit
+export BUILD_USERNAME=olzhas0986
+export BUILD_HOSTNAME=dev
+# Necessary shit
 lunch lineage_munch-bp2a-user
 m lunaris
