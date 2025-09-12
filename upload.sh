@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Usage: wget  && chmod +x upload.sh && ./upload.sh *.zip
 # Check if a file argument is provided
 if [[ "$#" == '0' ]]; then
     echo -e 'ERROR: No File Specified!' && exit 1
