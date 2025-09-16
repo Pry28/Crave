@@ -30,7 +30,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xi
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone --depth=1 https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250-MagicTime kernel/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250.git -b munch kernel/xiaomi/munch
 
 # Hardware Xiaomi
 git clone --depth=1 https://github.com/Olzhas-Kdyr/hardware_xiaomi hardware/xiaomi
@@ -54,11 +54,11 @@ export BUILD_HOSTNAME=ubuntu
 lunch lineage_munch-bp2a-user
 mka bacon
 
-cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+#cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
-. build/envsetup.sh
-export BUILD_USERNAME=olzhas
-export BUILD_HOSTNAME=ubuntu
-lunch lineage_munch-bp2a-user
-mka bacon
+#. build/envsetup.sh
+#export BUILD_USERNAME=olzhas
+#export BUILD_HOSTNAME=ubuntu
+#lunch lineage_munch-bp2a-user
+#mka bacon
