@@ -45,7 +45,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 # ViPER4AndroidFX
-git clone --depth=1 https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+#git clone --depth=1 https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Build
 . build/envsetup.sh
