@@ -1,8 +1,8 @@
 rm -rf .repo/local_manifests
 
 # repo init
-#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
-repo init --git-lfs --no-clone-bundle -u https://git@github.com/LineageOS/android.git -b refs/changes/42/436442/31
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+#repo init --git-lfs --no-clone-bundle -u https://git@github.com/LineageOS/android.git -b refs/changes/42/436442/31
 
 # repo sync script
 /opt/crave/resync.sh
@@ -21,7 +21,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch
+git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch -b LunarisAOSP device/xiaomi/munch
 
 # Vendor Tree
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch
@@ -52,13 +52,13 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 lunch lineage_munch-bp2a-user
-mka bacon
+m lunaris
 
-#cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
-#. build/envsetup.sh
-#export BUILD_USERNAME=olzhas
-#export BUILD_HOSTNAME=ubuntu
-#lunch lineage_munch-bp2a-user
-#mka bacon
+. build/envsetup.sh
+export BUILD_USERNAME=olzhas
+export BUILD_HOSTNAME=ubuntu
+lunch lineage_munch-bp2a-user
+m lunaris
