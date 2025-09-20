@@ -21,7 +21,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch -b Trash device/xiaomi/munch
+git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch -b LunaTest device/xiaomi/munch
 
 # Vendor Tree
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch
@@ -58,11 +58,11 @@ export BUILD_HOSTNAME=ubuntu
 lunch lineage_munch-bp2a-user
 m lunaris
 
-cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+#cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
-. build/envsetup.sh
-export BUILD_USERNAME=olzhas
-export BUILD_HOSTNAME=ubuntu
-lunch lineage_munch-bp2a-user
-m lunaris
+#. build/envsetup.sh
+#export BUILD_USERNAME=olzhas
+#export BUILD_HOSTNAME=ubuntu
+#lunch lineage_munch-bp2a-user
+# lunaris
