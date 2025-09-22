@@ -44,13 +44,6 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 # MIUI Camera
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-# ViPER4AndroidFX
-#git clone --depth=1 https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
-
-# Vendor Lineage
-rm -rf vendor/lineage 
-git clone --depth=1 https://github.com/Olzhas-Kdyr/vendor_lineage-Luna vendor/lineage
-
 # Build
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
