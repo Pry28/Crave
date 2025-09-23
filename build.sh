@@ -47,7 +47,10 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 # Build
+rm -rf vendor/lineage 
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_vendor_lineage-Matrixx vendor/lineage
 rm -rf out/target/product/munch
+
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
