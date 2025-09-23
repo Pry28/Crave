@@ -3,7 +3,8 @@ rm -rf .repo/local_manifests
 # repo init
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 #repo init --git-lfs --no-clone-bundle -u https://git@github.com/LineageOS/android.git -b refs/changes/42/436442/31
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -46,17 +47,18 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 # Build
+rm -rf out/target/product/munch
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-lunch lineage_munch-bp2a-user
+lunch lineage_munch-bp1a-user
 mka bacon
 
-#cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
-#. build/envsetup.sh
-#export BUILD_USERNAME=olzhas
-#export BUILD_HOSTNAME=ubuntu
-#lunch lineage_munch-bp2a-user
-# lunaris
+. build/envsetup.sh
+export BUILD_USERNAME=olzhas
+export BUILD_HOSTNAME=ubuntu
+lunch lineage_munch-bp1a-user
+mka bacon
