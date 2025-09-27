@@ -1,10 +1,7 @@
 rm -rf .repo/local_manifests
 
 # repo init
-#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
-repo init --git-lfs --no-clone-bundle -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen
-#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
-#repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -23,7 +20,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch -b AOSP device/xiaomi/munch
+git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch
 
 # Vendor Tree
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch
@@ -35,7 +32,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware 
 git clone --depth=1 https://github.com/PocoF4Trees/kernel_munch.git -b munch kernel/xiaomi/munch
 
 # Hardware Xiaomi
-git clone --depth=1 https://github.com/Olzhas-Kdyr/hardware_xiaomi -b POS hardware/xiaomi
+git clone --depth=1 https://github.com/Olzhas-Kdyr/hardware_xiaomi hardware/xiaomi
 
 # Hardware Dolby
 git clone --depth=1 https://github.com/PocoF4Trees/hardware_dolby hardware/dolby
@@ -46,17 +43,10 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 # MIUI Camera
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-# Build
-#rm -rf hardware/lineage/compat
-#git clone https://github.com/Olzhas-Kdyr/android_hardware_lineage_compat.git hardware/lineage/compat
-#rm -rf vendor/lineage 
-#git clone --depth=1 https://github.com/Olzhas-Kdyr/android_vendor_lineage-Matrixx vendor/lineage
-rm -rf out/target/product/munch
-
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-lunch aosp_munch-bp2a-user
+lunch lineage_munch-bp2a-user
 mka bacon
 
 #cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
