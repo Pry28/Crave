@@ -53,7 +53,7 @@ cd ../../..
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-lunch lineage_munch-bp2a-user
+lunch lineage_munch-bp2a-userdebug
 m lunaris
 
 #cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
