@@ -31,7 +31,7 @@ git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone --depth=1 https://github.com/SenseiiX/fusionX_sm8250.git kernel/xiaomi/sm8250
+git clone --depth=1 https://github.com/SenseiiX/fusionX_sm8250.git -b wip-next kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone --depth=1 https://github.com/RisingOS-Revived-devices/android_hardware_xiaomi hardware/xiaomi
