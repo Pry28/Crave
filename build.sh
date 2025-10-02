@@ -20,10 +20,12 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b LunarisAOSP-16 device/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b LunarisAOSP-16 device/xiaomi/sm8250-common
 
 # Vendor Tree
-git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common
 
 # Munch FW
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
@@ -32,10 +34,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware 
 git clone --depth=1 https://github.com/PocoF4Trees/kernel_munch.git -b munch kernel/xiaomi/munch
 
 # Hardware Xiaomi
-git clone --depth=1 https://github.com/Olzhas-Kdyr/hardware_xiaomi hardware/xiaomi
-
-# Hardware Dolby
-git clone --depth=1 https://github.com/PocoF4Trees/hardware_dolby hardware/dolby
+git clone --depth=1 https://github.com/RisingOS-Revived-devices/android_hardware_xiaomi hardware/xiaomi
 
 # DeviceSettings
 git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesettings packages/resources/devicesettings
@@ -47,7 +46,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vend
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 lunch lineage_munch-bp2a-user
-mka bacon
+m lunaris
 
 #cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
 #cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
