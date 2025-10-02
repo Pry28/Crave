@@ -31,7 +31,7 @@ git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone --depth=1 https://github.com/PocoF4Trees/kernel_munch.git -b munch kernel/xiaomi/munch
+git clone --depth=1 https://github.com/PocoF4Trees/kernel_munch.git -b munch kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone --depth=1 https://github.com/RisingOS-Revived-devices/android_hardware_xiaomi hardware/xiaomi
@@ -41,6 +41,11 @@ git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesett
 
 # MIUI Camera
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+
+cd kernel/xiaomi/sm8250
+bash nextpatch.sh
+rm -rf KernelSU-Next/userspace/su
+cd ../../..
 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
