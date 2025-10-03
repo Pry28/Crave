@@ -34,7 +34,7 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware 
 git clone --depth=1 https://github.com/SenseiiX/fusionX_sm8250.git -b wip-next kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
-git clone --depth=1 https://github.com/RisingOS-Revived-devices/android_hardware_xiaomi hardware/xiaomi
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
 
 # DeviceSettings
 git clone --depth=1 https://github.com/PocoF4Trees/packages_resources_devicesettings packages/resources/devicesettings
