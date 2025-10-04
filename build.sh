@@ -42,6 +42,9 @@ git clone https://github.com/PocoF4Trees/packages_resources_devicesettings packa
 # MIUI Camera
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
+# Hardware Dolby Atmos
+git clone --depth=1 https://github.com/PocoF4Trees/hardware_dolby hardware/dolby
+
 # ViPER4AndroidFX
 #git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
