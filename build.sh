@@ -32,7 +32,7 @@ git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8
 git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone --depth=1 https://github.com/munch-devs/kernel_xiaomi_munch -b new-ksu kernel/xiaomi/sm8250
+git clone --depth=1 https://github.com/PocoF4Trees/kernel_xiaomi_sm8250.git -b staging-test kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaomi
@@ -54,24 +54,26 @@ export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 
 cd kernel/xiaomi/sm8250
-git submodule update --init
-rm -rf KernelSU-Next/userspace/su
+chmod +x ksupatch.sh
+bash ksupatch.sh
 cd ../../..
 
 lunch infinity_munch-user
 m bacom
 
-#cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
-#
-#. build/envsetup.sh
+cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
+cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv vanilla.txt infinity_munch.mk && cd ../../..
 
-#cd kernel/xiaomi/sm8250
+. build/envsetup.sh
+
+cd kernel/xiaomi/sm8250
 #git submodule update --init
 #rm -rf KernelSU-Next/userspace/su
-#cd ../../..
+chmod +x ksupatch.sh
+bash ksupatch.sh
+cd ../../..
 
-##export BUILD_USERNAME=olzhas
-#export BUILD_HOSTNAME=ubuntu
-##lunch lineage_munch-bp2a-user
-#m lunaris 
+export BUILD_USERNAME=olzhas
+export BUILD_HOSTNAME=ubuntu
+lunch infinity_munch-user
+m bacon
