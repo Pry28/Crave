@@ -49,10 +49,16 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vend
 # ViPER4AndroidFX
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
+# Signing
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lunaris-priv/keys
+cd vendor/lunaris-priv/keys
+./keys.sh
+
+# Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-
+# Building: Cloning KSU Next
 cd kernel/xiaomi/sm8250
 chmod +x ksupatch.sh
 bash ksupatch.sh
@@ -61,17 +67,11 @@ cd ../../..
 lunch lineage_munch-bp2a-user
 m lunaris 
 
+# Building: Build Vanilla
 cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
 cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
 
 . build/envsetup.sh
-
-cd kernel/xiaomi/sm8250
-#git submodule update --init
-#rm -rf KernelSU-Next/userspace/su
-chmod +x ksupatch.sh
-bash ksupatch.sh
-cd ../../..
 
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
