@@ -21,7 +21,7 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b LunarisAOSP-16-test device/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b LunarisAOSP-16 device/xiaomi/munch
 git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b Lunatest device/xiaomi/sm8250-common
 
 # Vendor Tree
@@ -47,9 +47,9 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vend
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Signing
-#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lunaris-priv/keys
-#cd vendor/lunaris-priv/keys
-#./keys.sh
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lunaris-priv/keys
+cd vendor/lunaris-priv/keys
+./keys.sh
 
 # Building 
 . build/envsetup.sh
