@@ -1,8 +1,8 @@
 rm -rf .repo/local_manifests
 
 # repo init
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
-#repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 
 # repo sync script
 /opt/crave/resync.sh
@@ -11,9 +11,9 @@ repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 remove=(
 device/xiaomi
 kernel/xiaomi
+kernel/msm-4.19
 vendor/xiaomi
 hardware/xiaomi
-hardware/dolby
 packages/resources/devicesettings
 packages/apps/ViPER4AndroidFX
 )
@@ -21,8 +21,8 @@ packages/apps/ViPER4AndroidFX
 rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b LunarisAOSP-16 device/xiaomi/munch
-git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b Lunatest device/xiaomi/sm8250-common
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b InfinityX-16 device/xiaomi/munch
+git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b InfinityX-16 device/xiaomi/sm8250-common
 
 # Vendor Tree
 git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
@@ -47,9 +47,9 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vend
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Signing
-git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lunaris-priv/keys
-cd vendor/lunaris-priv/keys
-./keys.sh
+#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lunaris-priv/keys
+#cd vendor/lunaris-priv/keys
+#./keys.sh
 
 # Building 
 . build/envsetup.sh
@@ -60,16 +60,16 @@ cd kernel/xiaomi/sm8250
 bash ksupatch.sh
 cd ../../..
 
-lunch lineage_munch-bp2a-user
-m lunaris 
+lunch infinity_munch-user
+m bacon
 
 # Building: Build Vanilla
 cd out/target/product && rm -rf gapps && mv munch gapps && cd ../../..
-cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv vanilla.txt lineage_munch.mk && cd ../../..
+cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv vanilla.txt infinity_munch.mk && cd ../../..
 
 . build/envsetup.sh
 
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-lunch lineage_munch-bp2a-user
-m lunaris 
+lunch infinity_munch-user
+m bacon
