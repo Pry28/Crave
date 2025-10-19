@@ -1,11 +1,11 @@
-#rm -rf .repo/local_manifests
+rm -rf .repo/local_manifests
 
 # repo init
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
-#repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 
 # repo sync script
-#/opt/crave/resync.sh
+/opt/crave/resync.sh
 
 # Remove old device specific repos
 remove=(
@@ -46,10 +46,10 @@ git clone --depth=1 https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vend
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Signing
-git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys
-cd vendor/infinity-priv/keys
-./keys.sh
-cd ../../..
+#git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys
+#cd vendor/infinity-priv/keys
+#./keys.sh
+#cd ../../..
 
 # Building 
 . build/envsetup.sh
@@ -58,6 +58,7 @@ export BUILD_HOSTNAME=ubuntu
 # Building: Cloning KSU Next
 cd kernel/xiaomi/sm8250
 git submodule update --init
+rm -rf KernelSU-Next/userspace/su
 cd ../../..
 
 lunch infinity_munch-user
