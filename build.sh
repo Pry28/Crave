@@ -1,5 +1,3 @@
-mkdir yaap
-cd yaap
 # repo init
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
