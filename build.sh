@@ -62,7 +62,7 @@ export BUILD_HOSTNAME=ubuntu
 #rm -rf KernelSU-Next/userspace/su
 #cd ../../..
 
-lunch yaap_munch-user
+lunch yaap_munch-eng
 m yaap
 
 # Building: Build Vanilla
