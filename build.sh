@@ -1,28 +1,28 @@
-rm -rf .repo/local_manifests
-
+mkdir yaap
+cd yaap
 # repo init
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
-repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
+repo init --depth=1 -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 
 # repo sync script
-/opt/crave/resync.sh
+repo sync
 
 # Remove old device specific repos
-remove=(
-device/xiaomi
-kernel/xiaomi
-vendor/xiaomi
-hardware/xiaomi
-packages/resources/devicesettings
-packages/apps/ViPER4AndroidFX
-)
+#remove=(
+#device/xiaomi
+#kernel/xiaomi
+#vendor/xiaomi
+#hardware/xiaomi
+#packages/resources/devicesettings
+#packages/apps/ViPER4AndroidFX
+#)
 
-rm -rf "${remove[@]}"
+#rm -rf "${remove[@]}"
 
 # Deivce Tree
-git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b yaap device/xiaomi/munch
-git clone --depth=1 https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b yaap device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b yaap device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b yaap device/xiaomi/sm8250-common
 
 # Vendor Tree
 git clone --depth=1 https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
