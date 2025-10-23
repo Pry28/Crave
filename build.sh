@@ -35,8 +35,8 @@ git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaom
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-rm -rf vendor/crdroid
-git clone https://github.com/Olzhas-Kdyr/android_vendor_crdroid vendor/crdroid
+rm -rf vendor/lineage 
+git clone https://github.com/Olzhas-Kdyr/android_vendor_crdroid vendor/lineage 
 
 # Building 
 . build/envsetup.sh
