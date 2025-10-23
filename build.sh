@@ -10,14 +10,13 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
-packages/apps/ViPER4AndroidFX
 )
 
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b CrDroid-12.2 device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b CrDroid-12.2 device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
@@ -34,9 +33,6 @@ git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaom
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
-
-rm -rf vendor/lineage 
-git clone https://github.com/Olzhas-Kdyr/android_vendor_crdroid vendor/lineage 
 
 # Building 
 . build/envsetup.sh
