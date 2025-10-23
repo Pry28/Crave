@@ -10,6 +10,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
+vendor/lineage-priv/keys
 )
 
 rm -rf "${remove[@]}"
@@ -33,6 +34,9 @@ git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaom
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+
+# Signing 
+git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
 
 # Building 
 . build/envsetup.sh
