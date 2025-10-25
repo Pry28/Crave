@@ -10,7 +10,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
-vendor/lineage-priv/keys
+vendor/crdroid-priv/keys
 )
 
 rm -rf "${remove[@]}"
@@ -30,13 +30,13 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 git clone --depth=1 https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
-git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaomi
+git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 # My Keys
-git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
+git clone https://github.com/Olzhas-Kdyr/keys.git vendor/crdroid-priv/keys
 
 # Building 
 . build/envsetup.sh
