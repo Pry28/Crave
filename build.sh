@@ -10,6 +10,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
+packages/resources/devicesettings
 vendor/lineage-priv/keys
 )
 
@@ -34,6 +35,9 @@ git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xi
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+
+# devicesettings
+git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
