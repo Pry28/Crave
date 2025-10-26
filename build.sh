@@ -12,6 +12,7 @@ vendor/xiaomi
 hardware/xiaomi
 packages/resources/devicesettings
 vendor/lineage-priv/keys
+out/target/product/munch
 )
 
 rm -rf "${remove[@]}"
@@ -28,7 +29,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone --depth=1 https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
+git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi
@@ -48,4 +49,5 @@ export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
 lunch lineage_munch-bp2a-user
+make installclean
 m bacon
