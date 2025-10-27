@@ -48,6 +48,6 @@ git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp2a-user
+lunch lineage_munch-bp2a-userdebug
 make installclean
 m bacon
