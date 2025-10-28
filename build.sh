@@ -29,7 +29,9 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
+#git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b staging-ksu kernel/xiaomi/sm8250
+cd kernel/xiaomi/sm8250 && git submodule update --init && rm -rf KernelSU-Next/userspace/su && cd ../../..
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi
@@ -48,6 +50,6 @@ git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp2a-userdebug
+lunch lineage_munch-bp2a-user
 make installclean
 m bacon
