@@ -12,14 +12,13 @@ vendor/xiaomi
 hardware/xiaomi
 packages/resources/devicesettings
 vendor/lineage-priv/keys
-out/target/product/munch
 )
 
 rm -rf "${remove[@]}"
 
 # Deivce Trees
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b crtest device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
