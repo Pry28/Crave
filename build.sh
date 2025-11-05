@@ -29,8 +29,8 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging kernel/xiaomi/sm8250
-#git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu kernel/xiaomi/sm8250
+#git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging kernel/xiaomi/sm8250
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git kernel/xiaomi/sm8250
 #cd kernel/xiaomi/sm8250 && git submodule update --init && rm -rf KernelSU-Next/userspace/su && cd ../../..
 
 # Hardware Xiaomi
