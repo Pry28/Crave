@@ -1,7 +1,7 @@
 # repo init
-#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 #repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
-repo init --depth=1 -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs
+#repo init --depth=1 -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -12,6 +12,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
+hardware/dolby
 packages/resources/devicesettings
 vendor/voltage-priv/keys
 vendor/lineage-priv/keys
@@ -20,8 +21,8 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b vos-16 device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b vos-16 device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b aosp-test device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
@@ -35,8 +36,9 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 git clone https://github.com/munch-devs/kernel_xiaomi_munch.git kernel/xiaomi/sm8250
 #cd kernel/xiaomi/sm8250 && git submodule update --init && rm -rf KernelSU-Next/userspace/su && cd ../../..
 
-# Hardware Xiaomi
+# Hardware Xiaomi + Dolby
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi
+git clone https://github.com/Olzhas-Kdyr/hardware_dolby -b sony-1.2 hardware/dolby
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
@@ -45,22 +47,23 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # My Keys
-git clone https://github.com/VoltageOS/vendor_voltage-priv_keys vendor/voltage-priv/keys
-cd vendor/voltage-priv/keys
-./keys.sh
-cd ../../..
+git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
+#git clone https://github.com/VoltageOS/vendor_voltage-priv_keys vendor/voltage-priv/keys
+#cd vendor/voltage-priv/keys
+#./keys.sh
+#cd ../../..
 
-rm -rf vendor/voltage 
-git clone https://github.com/Olzhas-Kdyr/vendor_voltage vendor/voltage 
+#rm -rf vendor/voltage 
+#git clone https://github.com/Olzhas-Kdyr/vendor_voltage vendor/voltage 
 
-rm -rf build/soong
-git clone https://github.com/Olzhas-Kdyr/build_soong-vos build/soong
+#rm -rf build/soong
+#git clone https://github.com/Olzhas-Kdyr/build_soong-vos build/soong
 
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch voltage_munch-bp2a-user
+lunch lineage_munch-bp2a-user
 make installclean
 m bacon
