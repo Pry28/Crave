@@ -46,6 +46,9 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys.git vendor/voltage-priv/keys
 
+rm -rf vendor/voltage 
+git clone https://github.com/Olzhas-Kdyr/vendor_voltage vendor/voltage 
+
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
