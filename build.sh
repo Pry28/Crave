@@ -14,6 +14,7 @@ vendor/xiaomi
 hardware/xiaomi
 packages/resources/devicesettings
 vendor/voltage-priv/keys
+vendor/lineage-priv/keys
 )
 
 rm -rf "${remove[@]}"
@@ -44,7 +45,10 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.git packages/resources/devicesettings
 
 # My Keys
-git clone https://github.com/Olzhas-Kdyr/keys.git vendor/voltage-priv/keys
+git clone https://github.com/VoltageOS/vendor_voltage-priv_keys vendor/voltage-priv/keys
+cd vendor/voltage-priv/keys
+./keys.sh
+cd ../../..
 
 rm -rf vendor/voltage 
 git clone https://github.com/Olzhas-Kdyr/vendor_voltage vendor/voltage 
