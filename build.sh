@@ -1,7 +1,7 @@
 # repo init
 #repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 #repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
-repo init -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs
+repo init --depth=1 -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
