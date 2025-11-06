@@ -1,15 +1,15 @@
 # repo init
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 #repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 #repo init --depth=1 -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs
 
 # repo sync script
-/opt/crave/resync.sh
+#/opt/crave/resync.sh
 
 # Remove old device specific repos
 remove=(
 device/xiaomi
-kernel/xiaomi
+#kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
 hardware/dolby
@@ -33,7 +33,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 
 # Kernel Tree
 #git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging kernel/xiaomi/sm8250
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git kernel/xiaomi/sm8250
+#git clone https://github.com/munch-devs/kernel_xiaomi_munch.git kernel/xiaomi/sm8250
 #cd kernel/xiaomi/sm8250 && git submodule update --init && rm -rf KernelSU-Next/userspace/su && cd ../../..
 
 # Hardware Xiaomi + Dolby
