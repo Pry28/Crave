@@ -31,7 +31,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xia
 git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b bak kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
-git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi
+git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
 
 # MIUI Camera
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
