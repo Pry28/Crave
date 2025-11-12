@@ -17,8 +17,8 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch
-git clone https://github.com/crdroidandroid/android_device_xiaomi_sm8250-common.git -b 16.0-munch device/xiaomi/sm8250-common
+git clone https://github.com/crdroidandroid/android_device_xiaomi_munch.git device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/crdroidandroid/proprietary_vendor_xiaomi_munch -b 16.0 vendor/xiaomi/munch
@@ -28,7 +28,7 @@ git clone https://github.com/crdroidandroid/proprietary_vendor_xiaomi_sm8250-com
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b bak kernel/xiaomi/sm8250
+git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250 -b 16.0-munch kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
