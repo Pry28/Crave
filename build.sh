@@ -43,9 +43,6 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
-rm -rf hardware/google/pixel
-git clone https://github.com/Olzhas-Kdyr/android_hardware_google_pixel.git hardware/google/pixel
-
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
