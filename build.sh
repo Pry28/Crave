@@ -1,5 +1,6 @@
 # repo init
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/Evolution-X/manifest -b bka-q1 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -47,5 +48,5 @@ git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp2a-user
-m bacon
+lunch lineage_munch-bp3a-user
+m evolution 
