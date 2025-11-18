@@ -47,6 +47,9 @@ cd vendor/gms
 bash generate-gms.sh
 cd ../..
 
+rm -rf hardware/google/pixel
+git clone https://github.com/Olzhas-Kdyr/android_hardware_google_pixel.git hardware/google/pixel
+
 # Building 
 . build/envsetup.sh
 
