@@ -29,7 +29,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250 -b 16.0-munch kernel/xiaomi/sm8250
+git clone https://github.com/EmanuelCN/kernel_xiaomi_sm8250 -b bpf2 kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
@@ -49,7 +49,14 @@ cd ../..
 
 # Building 
 . build/envsetup.sh
+
+cd kernel/xiaomi/sm8250
+rm -rf KernelSU-Next
+git submodule update --init
+cd ../../..
+
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
+
 lunch mica_munch-bp3a-userdebug
 m mica-release 
