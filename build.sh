@@ -1,5 +1,6 @@
 # repo init
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/Project-Mica/manifest -b 16-qpr1
 
 # repo sync script
 /opt/crave/resync.sh
@@ -21,8 +22,8 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiao
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
 
 # Vendor Trees
-git clone https://github.com/crdroidandroid/proprietary_vendor_xiaomi_munch -b 16.0 vendor/xiaomi/munch
-git clone https://github.com/crdroidandroid/proprietary_vendor_xiaomi_sm8250-common -b 16.0-munch vendor/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common
 
 # Munch Firmware
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
@@ -42,10 +43,13 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
+cd vendor/gms
+bash generate-gms.sh
+cd ../..
+
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp2a-user
-m bacon
+lunch mica_munch-bp3a-userdebug
+m mica-release 
