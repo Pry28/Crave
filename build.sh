@@ -17,7 +17,7 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/crdroidandroid/android_device_xiaomi_munch.git device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
 
 # Vendor Trees
