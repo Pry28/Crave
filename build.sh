@@ -1,7 +1,7 @@
 # repo init
-#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 #repo init -u https://github.com/Project-Mica/manifest -b 16-qpr1
-repo init -u https://github.com/ProjectMatrixx/android.git -b 16.0 --git-lfs
+#repo init -u https://github.com/ProjectMatrixx/android.git -b 16.0 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -19,7 +19,7 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b matrixx device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
 
 # Vendor Trees
