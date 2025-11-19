@@ -1,6 +1,7 @@
 # repo init
 #repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
-repo init -u https://github.com/Project-Mica/manifest -b 16-qpr1
+#repo init -u https://github.com/Project-Mica/manifest -b 16-qpr1
+repo init -u https://github.com/ProjectMatrixx/android.git -b 16.0 --git-lfs
 
 # repo sync script
 /opt/crave/resync.sh
@@ -18,8 +19,8 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b mica device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git -b mica device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b matrixx device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
@@ -29,7 +30,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/EmanuelCN/kernel_xiaomi_sm8250 -b bpf2 kernel/xiaomi/sm8250
+git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250.git -b 16.0-munch kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
@@ -43,23 +44,10 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
-cd vendor/gms
-bash generate-gms.sh
-cd ../..
-
-rm -rf hardware/google/pixel
-git clone https://github.com/Olzhas-Kdyr/android_hardware_google_pixel.git hardware/google/pixel
-
 # Building 
 . build/envsetup.sh
-
-cd kernel/xiaomi/sm8250
-rm -rf KernelSU-Next
-git submodule update --init
-cd ../../..
-
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
-
-lunch mica_munch-bp3a-userdebug
-m mica-release 
+export SKIP_ABI_CHECKS=true
+lunch lineage_munch-bp2a-user
+m bacon
