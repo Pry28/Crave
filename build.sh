@@ -27,7 +27,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common
 
 # Munch Firmware
-git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware
 
 # Kernel Tree
 git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250.git -b 16.0-munch kernel/xiaomi/sm8250
@@ -36,7 +36,7 @@ git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250.git -b 
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
 
 # MIUI Camera
-git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera.git vendor/xiaomi/miuicamera
 
 # devicesettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.git packages/resources/devicesettings
