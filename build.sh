@@ -44,6 +44,12 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
+cd kernel/xiaomi/sm8250
+chmod +x ksu.sh
+bash ksu.sh
+rm -rf KernelSU-Next/userspace/su
+cd ../../..
+
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
