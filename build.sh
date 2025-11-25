@@ -20,7 +20,7 @@ rm -rf "${remove[@]}"
 
 # Deivce Trees
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git -b aosp-16-cleanup device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
