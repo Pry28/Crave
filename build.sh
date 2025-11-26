@@ -30,8 +30,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-#git clone https://github.com/crdroidandroid/android_kernel_xiaomi_sm8250.git -b 16.0-munch kernel/xiaomi/sm8250
-https://github.com/Khalvat-M/android_kernel_xiaomi_sm8250.git kernel/xiaomi/sm8250
+git clone https://github.com/POCO-F4-Development/kernel_xiaomi_sm8250.git -b aosp-16-qpr1 kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
@@ -53,6 +52,9 @@ git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
 rm -rf build/soong
 git clone https://github.com/Olzhas-Kdyr/build_soong.git -b bq1 build/soong 
+
+rm -rf vendor/pixel-style
+git clone https://github.com/Olzhas-Kdyr/vendor_pixel-style.git vendor/pixel-style
 
 # Building 
 . build/envsetup.sh
