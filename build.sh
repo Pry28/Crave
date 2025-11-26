@@ -51,6 +51,9 @@ git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 #rm -rf KernelSU-Next/userspace/su
 #cd ../../..
 
+rm -rf build/soong
+git clone https://github.com/Olzhas-Kdyr/build_soong.git -b bq1 build/soong 
+
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
