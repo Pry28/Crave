@@ -54,7 +54,7 @@ rm -rf build/soong
 git clone https://github.com/Olzhas-Kdyr/build_soong.git -b bq1 build/soong 
 
 rm -rf vendor/pixel-style
-git clone https://github.com/Olzhas-Kdyr/vendor_pixel-style.git vendor/pixel-style
+git clone https://github.com/Olzhas-Kdyr/vendor_pixel-style.git -b bq1 vendor/pixel-style
 
 # Building 
 . build/envsetup.sh
