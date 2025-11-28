@@ -1,7 +1,8 @@
 # repo init
 #repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 #repo init -u https://github.com/ProjectMatrixx/android.git -b 16.0 --git-lfs
-repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs
+#repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs
+repo init -u https://github.com/crdroidx/android.git -b 16.0 --git-lfs --no-clone-bundle
 
 # repo sync script
 /opt/crave/resync.sh
@@ -19,7 +20,7 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b evo device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common.git -b aosp-16-cleanup device/xiaomi/sm8250-common
 
 # Vendor Trees
@@ -44,17 +45,11 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings.gi
 # My Keys
 git clone https://github.com/Olzhas-Kdyr/keys vendor/lineage-priv/keys
 
-#cd kernel/xiaomi/sm8250
-#chmod +x ksu.sh
-#bash ksu.sh
-#rm -rf KernelSU-Next/userspace/su
-#cd ../../..
-
-rm -rf build/soong
-git clone https://github.com/Olzhas-Kdyr/build_soong.git -b bq1 build/soong 
-
-rm -rf vendor/pixel-style
-git clone https://github.com/Olzhas-Kdyr/vendor_pixel-style.git -b bq1 vendor/pixel-style
+cd kernel/xiaomi/sm8250
+chmod +x ksu.sh
+bash ksu.sh
+rm -rf KernelSU-Next/userspace/su
+cd ../../..
 
 # Building 
 . build/envsetup.sh
@@ -62,4 +57,4 @@ export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
 lunch lineage_munch-bp3a-user
-m evolution 
+m bacon
