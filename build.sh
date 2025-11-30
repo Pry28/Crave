@@ -10,7 +10,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
-packages/true/devicesettings
+packages/resources/devicesettings
 vendor/lineage-priv/keys
 )
 
