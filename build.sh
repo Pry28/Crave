@@ -10,7 +10,7 @@ device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
-packages/resources/devicesettings
+packages/true/devicesettings
 vendor/lineage-priv/keys
 )
 
@@ -53,5 +53,5 @@ cd ../../..
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp2scripttr
+lunch lineage_munch-bp2a-user
 m bacon
