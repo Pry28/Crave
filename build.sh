@@ -57,6 +57,7 @@ cd ../../..
 #rm -rf system/bpf
 #git clone https://github.com/Pry28/system_bpf system/bpf
 
+rm -rf build/soong && git clone https://github.com/Pry28/android_build_soong.git build/soong
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
