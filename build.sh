@@ -1,10 +1,7 @@
 # repo init
-#repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
-#repo init -u https://github.com/ProjectMatrixx/android.git -b 16.0 --git-lfs
-#repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs
-repo init -u https://github.com/crdroidx/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
 
-# repo sync script
+#sync script
 /opt/crave/resync.sh
 
 # Remove old device specific repos
@@ -31,7 +28,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/POCO-F4-Development/kernel_xiaomi_sm8250.git -b aosp-16-qpr1 kernel/xiaomi/sm8250
+git clone https://github.com/POCO-F4-Development/kernel_xiaomi_sm8250.git -b aosp-16 kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
@@ -56,5 +53,5 @@ cd ../../..
 export BUILD_USERNAME=olzhas
 export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
-lunch lineage_munch-bp3a-user
+lunch lineage_munch-bp2scripttr
 m bacon
