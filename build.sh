@@ -7,7 +7,7 @@
 # Remove old device specific repos
 remove=(
 device/xiaomi
-kernel/xiaomi
+#kernel/xiaomi
 vendor/xiaomi
 hardware/xiaomi
 packages/resources/devicesettings
