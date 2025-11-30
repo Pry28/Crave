@@ -1,8 +1,8 @@
 # repo init
-repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
+#repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
 
 #sync script
-/opt/crave/resync.sh
+#/opt/crave/resync.sh
 
 # Remove old device specific repos
 remove=(
@@ -28,7 +28,7 @@ git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware
 
 # Kernel Tree
-git clone https://github.com/POCO-F4-Development/kernel_xiaomi_sm8250.git -b aosp-16 kernel/xiaomi/sm8250
+#git clone https://github.com/POCO-F4-Development/kernel_xiaomi_sm8250.git -b aosp-16 kernel/xiaomi/sm8250
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b aosp-16 hardware/xiaomi
@@ -48,14 +48,14 @@ bash ksu.sh
 rm -rf KernelSU-Next/userspace/su
 cd ../../..
 
-rm -rf frameworks/base
-git clone https://github.com/Pry28/frameworks_base frameworks/base
+#rm -rf frameworks/base
+#git clone https://github.com/Pry28/frameworks_base frameworks/base
 
-rm -rf vendor/lineage
-git clone https://github.com/Pry28/vendor_lineage vendor/lineage
+#rm -rf vendor/lineage
+#git clone https://github.com/Pry28/vendor_lineage vendor/lineage
 
-rm -rf system/bpf
-git clone https://github.com/Pry28/system_bpf system/bpf
+#rm -rf system/bpf
+#git clone https://github.com/Pry28/system_bpf system/bpf
 
 # Building 
 . build/envsetup.sh
