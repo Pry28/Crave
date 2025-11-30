@@ -48,6 +48,15 @@ bash ksu.sh
 rm -rf KernelSU-Next/userspace/su
 cd ../../..
 
+rm -rf frameworks/base
+git clone https://github.com/Pry28/frameworks_base frameworks/base
+
+rm -rf vendor/lineage
+git clone https://github.com/Pry28/vendor_lineage vendor/lineage
+
+rm -rf system/bpf
+git clone https://github.com/Pry28/system_bpf system/bpf
+
 # Building 
 . build/envsetup.sh
 export BUILD_USERNAME=olzhas
