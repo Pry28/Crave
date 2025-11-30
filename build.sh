@@ -1,8 +1,8 @@
 # repo init
-#repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs
 
 #sync script
-#/opt/crave/resync.sh
+/opt/crave/resync.sh
 
 # Remove old device specific repos
 remove=(
@@ -48,14 +48,14 @@ bash ksu.sh
 rm -rf KernelSU-Next/userspace/su
 cd ../../..
 
-#rm -rf frameworks/base
-#git clone https://github.com/Pry28/frameworks_base frameworks/base
+rm -rf frameworks/base
+git clone https://github.com/Pry28/frameworks_base frameworks/base
 
-#rm -rf vendor/lineage
-#git clone https://github.com/Pry28/vendor_lineage vendor/lineage
+rm -rf vendor/lineage
+git clone https://github.com/Pry28/vendor_lineage vendor/lineage
 
-#rm -rf system/bpf
-#git clone https://github.com/Pry28/system_bpf system/bpf
+rm -rf system/bpf
+git clone https://github.com/Pry28/system_bpf system/bpf
 
 rm -rf build/soong && git clone https://github.com/Pry28/android_build_soong.git build/soong
 # Building 
